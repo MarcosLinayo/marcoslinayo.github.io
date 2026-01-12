@@ -1,14 +1,14 @@
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'astro/config';
-import siteConfig from './src/data/site-config';
+// @ts-check
+import { defineConfig } from 'astro/config'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@astrojs/react'
 
-// https://astro.build/config
 export default defineConfig({
-    site: marcoslinayo.github.io,
-    vite: {
-        plugins: [tailwindcss()]
-    },
-    integrations: [mdx(), sitemap()]
-});
+  site: 'https://marcoslinayo.github.io',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  integrations: [react()],
+})
